@@ -23,7 +23,7 @@ Em uma situação hipotética, contando com o botão acionado, temos uma cidade 
 
 ![Atualização 2README-U](https://user-images.githubusercontent.com/86723326/137421509-c17cfb70-a9b3-494e-941d-69992c0938bb.png)
 
-Em uma situação hipotetica, contando com o botão não acionado, temos apenas o acionamento padrão onde não depende de outras variaveis, a não ser a variavel hora, como é mostrado na foto 2.
+Em uma situação hipotetica, contando com o botão não acionado, temos apenas o acionamento padrão onde não depende de outras variaveis, a não ser a variavel umidade, como é mostrado na foto 2.
     
     #5 CONCLUSÕES
 
