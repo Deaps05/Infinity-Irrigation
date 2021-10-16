@@ -73,7 +73,7 @@ void loop(){
   UmidadeTerra = analogRead(pino_sinal_analogico); //Faz uma leitura leitura analógica
  
   if(EstadoBotao == HIGH){ 
-  if (rtc.getTimeStr() == 8, 0, 0){ //Se for 8hrs de acordo Rtc prosseguir
+  if(UmidadeTerra > UmidadeTerraPadrao{ //Se Umidade da terra for menor que padrão (verdadeiro)
       for(pos = 0; pos < 90; pos++){ //Acionar o Servo Motor
         s.write(pos); //Write mostra a posição e posição = 0
         delay(13000); //Aguardar 13000 milisegundos = 13 segundos 
@@ -84,9 +84,8 @@ void loop(){
         delay(2000); //Aguardar 2000 milissegundos = 2 segundos
       }
   }
-    if(rtc.getTimeStr() == 15, 0, 0 || 16, 0, 0 || 17, 0, 0){ //Se for 15hrs de acordo Rtc prosseguir 
+      if(UmidadeTerra > UmidadeTerraPadrao){ //Se Umidade da terra for menor que padrão (verdadeiro)
       if(temperature > TemperaturaPadrao && humidity < UmidadePadrao){ //Se temperatura for maior que temperatura padrao e humidade for maior que humidade padrao
-        if(UmidadeTerra < UmidadeTerraPadrao){ //Se Umidade da terra for maior que padrão 
           for(pos=0; pos < 90; pos++){  //Acionar o Servo Motor
             s.write(pos); //Write mostra a posição e posição = 0
             delay(13000); //Aguardar 13000 milisegundos = 13 segundos 
@@ -102,7 +101,7 @@ void loop(){
       
     
   if(EstadoBotao == LOW){
-    if(rtc.getTimeStr() == 8, 0, 0){ //Se for 8hrs de acordo Rtc prosseguir 
+    if(UmidadeTerra > UmidadeTerraPadrao){ //Se Umidade da terra for menor que padrão (verdadeiro) 
       for(pos=0; pos < 90; pos++){ //Acionar o Servo Motor
         s.write(pos); //Write mostra a posição e posição = 0
         delay(13000); //Aguardar 13000 milisegundos = 13 segundos 
